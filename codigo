@@ -1,0 +1,41 @@
+select * from tabela_paises;
+
+select cidade 
+from tabela_paises 
+where pais = 'Brazil';
+
+select cidade 
+from tabela_paises 
+where regiao = 'Ceará';
+
+select regiao, count (regiao)
+from tabela_paises
+where pais = 'China'
+group by  regiao;
+
+select distinct regiao
+from tabela_paises 
+where pais = 'Canada';
+
+select distinct pais
+from tabela_paises;
+
+select distinct cidade
+from tabela_paises 
+where pais = 'Brazil';
+
+select pais, count (distinct regiao)
+from tabela_paises
+group by pais;
+
+select count (nome)
+from tabela_paises
+where nome like 'João%';
+
+select count (nome)
+from tabela_paises 
+where nome = 'John';
+
+select distinct pais 
+from tabela_paises
+order by(pais);
